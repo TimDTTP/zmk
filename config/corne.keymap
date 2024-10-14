@@ -13,17 +13,17 @@
 #define NUM 2
 #define FUN 3
 
+&mt {
+    tapping-term-ms = <200>;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+};
+
 / {
     chosen {
-      zmk,matrix_transform = &five_column_transform;
-    };
-
-    &mt {
-        tapping-term-ms = <200>;
-    };
-
-    &caps_word {
-        continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+        zmk,matrix_transform = &five_column_transform;
     };
 
     conditional_layers {
