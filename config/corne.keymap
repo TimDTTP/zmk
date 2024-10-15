@@ -83,7 +83,7 @@
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         //│ 1           │ 2           │ 3           │ 4           │ 5           │   │ 6           │ 7           │ 8           │ 9           │ 0           │
-            &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
+            &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│ DELETE      │ CAPSLOCK    │ PRINT       │ INSERT      │             │   │ LEFT        │ DOWN        │ UP          │ RIGHT       │             │
             &kp DEL     &hm LCTRL CAPS &hm LGUI PSCRN &hm LALT INS  &none             &kp LARW     &hm LALT DARW &hm LGUI UARW &hm LCTRL RARW &none
