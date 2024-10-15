@@ -32,7 +32,7 @@
 
     behaviors {
         hm: home_mods {
-            compatible = "zmk, behavior-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
