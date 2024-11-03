@@ -55,7 +55,7 @@
             &kp A         &hm LCTRL S   &hm LGUI D    &hm LALT F    &kp G             &kp H         &hm LALT J    &hm LGUI K    &hm LCTRL L   &kp BSPC
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│ Z           │ X           │ C           │ V           │ B           │   │ N           │ M           │ , <         │ . >         │ ENTER       │
-            &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT      &mt ESC ENTER 
+            &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT      &kp ENTER 
         //╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                         &caps_word    &mo SYM       &kp LSHIFT        &kp SPACE     &mo NUM       &kp TAB
         //                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -85,11 +85,11 @@
         //│ 1           │ 2           │ 3           │ 4           │ 5           │   │ 6           │ 7           │ 8           │ 9           │ 0           │
             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│ DELETE      │ CAPSLOCK    │ PRINT       │ INSERT      │             │   │ LEFT        │ DOWN        │ UP          │ RIGHT       │             │
-            &kp DEL     &hm LCTRL CAPS &hm LGUI PSCRN &hm LALT INS  &none             &kp LARW     &hm LALT DARW &hm LGUI UARW &hm LCTRL RARW &none
+        //│ DELETE      │ CAPSLOCK    │ PRINT       │ INSERT      │             │   │ LEFT        │ DOWN        │ UP          │ RIGHT       │ DELETE      │
+            &kp DEL     &hm LCTRL CAPS &hm LGUI PSCRN &hm LALT INS  &none             &kp LARW     &hm LALT DARW &hm LGUI UARW &hm LCTRL RARW &kp DEL
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │             │ HOME        │ PAGE DN     │ PAGE UP     │ END         │
-            &none         &none         &none         &none         &none             &none         &kp HOME      &kp PG_DN     &kp PG_UP     &kp END
+        //│             │             │             │             │             │   │ HOME        │ PAGE DN     │ PAGE UP     │ END         │ ESC         │
+            &none         &none         &none         &none         &none             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp ESC
         //╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                         &none         &trans        &kp LSHIFT        &kp SPACE     &trans        &none
         //                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
