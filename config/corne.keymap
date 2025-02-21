@@ -43,8 +43,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &sk LC(LG(LALT))>
-                , <&macro_tap &sl 2>
+                = <&macro_tap &sl 2>
+                , <&macro_tap &sk LC(LG(LALT))>
                 ;
         };
     };
