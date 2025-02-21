@@ -43,7 +43,7 @@
         combo_hyperNum {
             timeout-ms = <100>;
             key-positions = <15 16 17 36>;
-            bindings = <&sk LC(LG(LA))>, <&sl 2>;
+            bindings = <&sk LC(LG(LALT))>, <&sl 2>;
     };
     };
 
