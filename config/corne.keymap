@@ -38,12 +38,22 @@
         };
     };
 
+    macros {
+        hyper: m_hyper {
+            compatible = "zmk, behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk LC(LG(LALT)) &sl 2>
+                ;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_hyperNum {
             timeout-ms = <100>;
             key-positions = <14 15 16 37>;
-            bindings = <&sk LC(LG(LALT))>, <&sl 2>;
+            bindings = <&hyper>;
     };
     };
 
