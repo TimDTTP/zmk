@@ -57,7 +57,7 @@
         //│ TOG MOUSE   │ Z           │ X           │ C           │ V           │ B           │   │ N           │ M           │ , <         │ . >         │ /           │ ENTER       │
             &tog MOU      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH     &kp ENTER
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &caps_word    &mo SYM       &kp LSHIFT        &kp SPACE     &mo NUM       &kp TAB
+                                                      &none         &mo SYM       &kp LSHIFT        &kp SPACE     &mo NUM       &none
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -85,8 +85,8 @@
         //│             │ /           │ 7           │ 8           │ 9           │ -           │   │             │             │             │             │             │ BACKSPACE   │
             &none         &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS         &none         &none         &none         &none         &none         &kp BSPC          
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│             │ *           │ 4           │ 5           │ 6           │ +           │   │             │             │             │             │             │ DELETE      │
-            &none         &kp STAR      &kp N4        &kp DOWN      &kp N6        &kp PLUS          &none         &kp LCTRL     &kp LGUI      &kp LALT      &none         &kp DELETE          
+        //│             │ *           │ 4           │ 5           │ 6           │ +           │   │ LEFT        │ DOWN        │ UP          │ RIGHT       │             │ DELETE      │
+            &none         &kp STAR      &kp N4        &kp DOWN      &kp N6        &kp PLUS          &kp LEFT      &hm LALT DOWN &hm LGUI UP  &hm LCTRL RIGHT &none        &kp DELETE          
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
         //│             │ 0           │ 1           │ 2           │ 3           │ .           │   │             │             │             │             │             │ ENTER       │
             &none         &kp N0        &kp N1        &kp N2        &kp N3        &kp DOT           &none         &none         &none         &none         &none         &kp ENTER          
