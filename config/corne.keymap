@@ -17,6 +17,10 @@
 
 #define MO_TOG(layer) &mo_tog layer layer
 
+&lt {
+    tapping-term-ms = <200>;
+};
+
 &caps_word {
     continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
 };
@@ -40,6 +44,34 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+
+        undersqt: under_sqt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER>, <&kp SQT>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        commaqmark: comma_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        minusdqt: minus_dqt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp DQT>;
+            mods = <(MOD_LSFT)>;
+        };
+            
+        fslhlt: fslh_lt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp DQT>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -48,16 +80,16 @@
         default_layer { // Layer 0
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│ TAB         │ Q           │ W           │ E           │ R           │ T           │   │ Y           │ U           │ I           │ O           │ P           │ BACKSPACE   │
-            &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSPC
+        //│ TAB         │ B           │ L           │ D           │ W           │ Z           │   │ _ '         │ F           │ O           │ U           │ J           │ ; :         │
+            &kp TAB       &kp B         &kp L         &kp D         &kp W         &kp Z             &undersqt     &kp F         &kp O         &kp U         &kp J         &kp SEMI
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│ ESC         │ A           │ S           │ D           │ F           │ G           │   │ H           │ J           │ K           │ L           │ ;           │ '           │
-            &kp ESC       &kp A         &hm LCTRL S   &hm LGUI D    &hm LALT F    &kp G             &kp H         &hm LALT J    &hm LGUI K    &hm LCTRL L   &kp SEMI      &kp SQT
+        //│ ESC         │ N           │ R           │ T           │ S           │ G           │   │ Y           │ H           │ A           │ E           │ I           │ , ?         │
+            &kp ESC       &kp N         &hm LCTRL R   &hm LGUI T    &hm LALT S    &kp G             &kp Y         &hm LALT H    &hm LGUI A    &hm LCTRL E   &kp I         &commaqmark
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│ TOG MOUSE   │ Z           │ X           │ C           │ V           │ B           │   │ N           │ M           │ , <         │ . >         │ /           │ ENTER       │
-            &tog MOU      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH     &kp ENTER
+        //│ TOG MOUSE   │ Q           │ X           │ M           │ C           │ V           │   │ K           │ P           │ . >         │ - "         │ / <         │ ENTER       │
+            &tog MOU      &kp Q         &kp X         &kp M         &kp C         &kp V             &kp K         &kp P         &kp DOT       &minusdqt     &fslhlt     &kp ENTER
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &none         &mo SYM       &kp LSHIFT        &kp SPACE     &mo NUM       &none
+                                                      &to 0         &lt 1 DEL     &kp LSHIFT        &kp SPACE     &lt 2 BSPC    &to 1
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -68,13 +100,13 @@
         //│             │ !           │ @           │ #           │ $           │ %           │   │ ^           │ &           │ *           │ (           │ )           │             │
             &none         &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &none            
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│             │             │             │             │ `           │             │   │ \           │ -           │ =           │ {           │ }           │             │
-            &none         &none         &kp LCTRL     &kp LGUI      &hm LALT GRAVE &none            &kp BSLH    &hm LALT MINUS &hm LGUI EQUAL &hm LCTRL LBRC &kp RBRC     &none            
+        //│             │             │             │             │             │             │   │ `           │ \           │ =           │ {           │ }           │             │
+            &none         &none         &kp LCTRL     &kp LGUI      &kp LALT      &none            &kp GRAVE    &hm LALT BSLH  &hm LGUI EQUAL &hm LCTRL LBRC &kp RBRC     &none            
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│             │             │             │             │ ~           │             │   │ |           │ _           │ +           │ [           │ ]           │             │
-            &none         &none         &none         &none         &kp TILDE     &none             &kp PIPE      &kp UNDER     &kp PLUS      &kp LBKT      &kp RBKT      &none            
+        //│             │             │             │             │             │             │   │ ~           │ |           │ +           │ [           │ ]           │             │
+            &none         &none         &none         &none         &none         &none             &kp TILDE     &kp PIPE      &kp PLUS      &kp LBKT      &kp RBKT      &none            
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &none         &trans        &kp LSHIFT        &kp SPACE     &trans        &none
+                                                      &trans        &trans        &none             &kp SPACE     &none         &to 2
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -82,16 +114,16 @@
         num_layer { // Layer 2
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│             │ /           │ 7           │ 8           │ 9           │ -           │   │             │             │             │             │             │ BACKSPACE   │
-            &none         &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS         &none         &none         &none         &none         &none         &kp BSPC          
+        //│ TAB         │ /           │ 7           │ 8           │ 9           │ -           │   │             │             │ UP          │             │             │ BACKSPACE   │
+            &kp TAB       &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS         &none         &none         &kp UP         &none         &none         &kp BSPC          
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│             │ *           │ 4           │ 5           │ 6           │ +           │   │ LEFT        │ DOWN        │ UP          │ RIGHT       │             │ DELETE      │
-            &none         &kp STAR      &kp N4        &kp DOWN      &kp N6        &kp PLUS          &kp LEFT      &hm LALT DOWN &hm LGUI UP  &hm LCTRL RIGHT &none        &kp DELETE          
+        //│             │ *           │ 4           │ 5           │ 6           │ +           │   │             │ LEFT        │ DOWN        │ RIGHT       │             │ DELETE      │
+            &none         &kp STAR      &kp N4        &kp DOWN      &kp N6        &kp PLUS          &none        &hm LALT LEFT &hm LGUI DOWN &hm LCTRL RIGHT &none        &kp DELETE          
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
         //│             │ 0           │ 1           │ 2           │ 3           │ .           │   │             │             │             │             │             │ ENTER       │
             &none         &kp N0        &kp N1        &kp N2        &kp N3        &kp DOT           &none         &none         &none         &none         &none         &kp ENTER          
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &none         &trans        &hm LSHFT ENTER   &kp SPACE     &trans        &none
+                                                      &trans        &kp SPACE     &hm LSHFT ENTER   &none         &trans        &to 0
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -102,11 +134,11 @@
         //│ BT CLEAR    │             │ F7          │ F8          │ F9          │ F10         │   │ PROFILE 0   │             │             │ VOL MUTE    │ PLAY/PAUSE  │             │
             &bt BT_CLR    &none         &kp F7        &kp F8        &kp F9        &kp F10           &bt BT_SEL 0  &none         &none         &kp C_MUTE    &kp C_PP      &none            
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│             │             │ F4          │ F5          │ F6          │ PROFILE 1   │   │ PROFILE 1   │INC BRIGHT   │             │  VOL UP     │  NEXT       │             │
-            &none         &none         &kp F4        &kp F5        &kp F6        &bt BT_SEL 1      &bt BT_SEL 1  &kp C_BRI_UP  &none         &kp C_VOL_UP  &kp C_NEXT    &none            
+        //│             │             │ F4          │ F5          │ F6          │ F11         │   │ PROFILE 1   │INC BRIGHT   │             │  VOL UP     │  NEXT       │             │
+            &none         &none         &kp F4        &kp F5        &kp F6        &kp F11           &bt BT_SEL 1  &kp C_BRI_UP  &none         &kp C_VOL_UP  &kp C_NEXT    &none            
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│             │             │ F1          │ F2          │ F3          │ BT CLEAR    │   │ PROFILE 2   │DEC BRIGHT   │             │  VOL DN     │  PREV       │             │
-            &none         &none         &kp F1        &kp F2        &kp F3       &bt BT_CLR         &bt BT_SEL 2  &kp C_BRI_DN  &none         &kp C_VOL_DN  &kp C_PREV    &none            
+        //│             │             │ F1          │ F2          │ F3          │ F12         │   │ PROFILE 2   │DEC BRIGHT   │             │  VOL DN     │  PREV       │             │
+            &none         &none         &kp F1        &kp F2        &kp F3        &kp F12           &bt BT_SEL 2  &kp C_BRI_DN  &none         &kp C_VOL_DN  &kp C_PREV    &none            
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &none         &trans        &none             &none         &trans        &none
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
