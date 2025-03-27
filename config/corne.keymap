@@ -69,7 +69,7 @@
         fslhlt: fslh_lt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp FLSH>, <&kp LT>;
+            bindings = <&kp FSLH>, <&kp LT>;
             mods = <(MOD_LSFT)>;
         };
     };
