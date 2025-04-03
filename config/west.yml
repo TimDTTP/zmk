@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: m165437 # custom nano view
-      url-base: https://github.com/M165437 # custom nano view
+    - name: infely # custom nano view
+      url-base: https://github.com/infely # custom nano view
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: nice-view-gem # custom nano view
-      remote: m165437 # custom nano view
+    - name: nice-view-battery # custom nano view
+      remote: infely # custom nano view
       revision: main # custom nano view
   self:
     path: config
