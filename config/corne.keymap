@@ -102,7 +102,7 @@
         //│ TOG MOUSE   │ Q           │ X           │ M           │ C           │ V           │   │ K           │ P           │ . >         │ - "         │ / <         │ ENTER       │
             &tog MOU      &kp Q         &kp X         &kp M         &kp C         &kp V             &kp K         &kp P         &kp DOT       &minusdqt     &fslhlt       &kp ENTER
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &kp PG_DN     &lt 1 DEL     &kp LSHIFT        &kp SPACE     &lt 2 BSPC    &aerospace
+                                                      &kp CAPS      &lt 1 DEL     &kp LSHIFT        &kp SPACE     &lt 2 BSPC    &aerospace
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -130,13 +130,13 @@
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         //│ TAB         │ /           │ 7           │ 8           │ 9           │ -           │   │             │             │ UP          │             │             │ BACKSPACE   │
-            &kp TAB       &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS         &none         &none         &kp UP         &none         &none         &kp BSPC          
+            &kp TAB       &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS         &none         &none         &kp UP        &none         &none         &kp BSPC          
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
         //│             │ *           │ 4           │ 5           │ 6           │ +           │   │             │ LEFT        │ DOWN        │ RIGHT       │             │ DELETE      │
-            &none         &kp STAR      &kp N4        &kp N5        &kp N6        &kp PLUS          &none        &hm LALT LEFT &hm LGUI DOWN &hm LCTRL RIGHT &none        &kp DELETE          
+            &kp PG_UP     &kp STAR      &kp N4        &kp N5        &kp N6        &kp PLUS          &none         &kp LEFT      &kp DOWN      &kp RIGHT     &none         &kp DELETE          
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
         //│             │ 0           │ 1           │ 2           │ 3           │ .           │   │             │             │             │             │             │ ENTER       │
-            &none         &kp N0        &kp N1        &kp N2        &kp N3        &kp DOT           &none         &none         &none         &none         &none         &kp ENTER          
+            &kp PG_DN     &kp N0        &kp N1        &kp N2        &kp N3        &kp DOT           &none         &none         &none         &none         &none         &kp ENTER          
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &none         &trans        &hm LSHFT ENTER   &none         &trans        &trans
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
