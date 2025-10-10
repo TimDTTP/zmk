@@ -2,8 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: infely # custom nano view
-      url-base: https://github.com/infely # custom nano view
+    - name: m165437 # custom nano view
+      url-base: https://github.com/M165437 # custom nano view
+    - name: urob # helper for better hm
+      url-base: https://github.com/urob # helper for better hm
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -12,5 +14,8 @@ manifest:
     - name: nice-view-battery # custom nano view
       remote: infely # custom nano view
       revision: main # custom nano view
+    - name: zmk-helpers # helper for better hm
+      remote: urob # helper for better hm
+      revision: main # helper for better hm
   self:
     path: config
