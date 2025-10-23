@@ -111,7 +111,7 @@
             compatible = "zmk, behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to MOU>, <&to GAM>;
+            bindings = <&to 4>, <&to 5>;
         };
     };
 
