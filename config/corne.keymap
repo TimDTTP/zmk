@@ -108,10 +108,10 @@
         };
 
         td0: tap_dance_0 {
-            compatible = "zmk, behavior-tap-dance";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to 4>, <&to 5>;
+            bindings = <&to MOU>, <&to GAM>;
         };
     };
 
@@ -212,8 +212,8 @@
         //│             │             │ MV LEFT     │ MV DOWN     │ MV RIGHT    │             │   │             │ SCR LEFT    │ SCR DOWN    │ SCR RIGHT   │             │             │
             &none         &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none           &none      &msc SCRL_RIGHT &msc SCRL_UP  &msc SCRL_LEFT &none         &none            
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-        //│             │             │             │             │             │             │   │             │             │             │             │             │             │
-            &to 0         &none         &none         &none         &none         &none             &none         &none         &none         &none         &none         &none            
+        //│ LAYER 0     │             │             │             │             │             │   │             │             │             │             │             │             │
+            &to DEF       &none         &none         &none         &none         &none             &none         &none         &none         &none         &none         &none            
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &none         &trans        &mkp MB1          &mkp MB2      &trans        &none
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -231,7 +231,7 @@
             &kp ESC       &kp N         &kp R         &kp T         &kp S         &kp G             &kp Y         &kp H         &kp A         &kp E         &kp I         &commaqmark
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
         //│ LAYER 0     │ Q           │ X           │ M           │ C           │ V           │   │ K           │ P           │ . >         │ - "         │ / <         │ ENTER       │
-            &to 0         &kp Q         &kp X         &kp M         &kp C         &kp V             &kp K         &kp P         &kp DOT       &minusdqt     &fslhlt       &kp ENTER
+            &to DEF       &kp Q         &kp X         &kp M         &kp C         &kp V             &kp K         &kp P         &kp DOT       &minusdqt     &fslhlt       &kp ENTER
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &kp CAPS      &lt 1 DEL     &kp LSHIFT        &kp SPACE     &lt 2 BSPC    &aerospace
         //                                          ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
